@@ -3,24 +3,23 @@ import {
   createHashRouter,
   RouterProvider
 } from "react-router-dom";
-import { Provider } from 'react-redux';
-import { store } from './store/index';
 import MainPage from './containers/MainPage/MainPage';
-import ErrorPage from './containers/ErrorPage/ErrorPage';
+import CelebrationPage from './containers/CelebrationPage/CelebrationPage';
 
 const router = createHashRouter([
   {
+    path: "/celebration",
+    element: <CelebrationPage />,
+  },
+  {
     path: "/",
     element: <MainPage />,
-    errorElement: <ErrorPage />,
-  }
+  },
 ]);
 
 function App() {
   return (
-    <Provider store={store}>
-      <RouterProvider router={router} />
-    </Provider>
+    <RouterProvider router={router} />
   );
 }
 

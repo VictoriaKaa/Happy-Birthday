@@ -1,0 +1,73 @@
+.item {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    padding: 5px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    img {
+        max-width: 100%;
+        // max-height: 100%;
+    }
+}
+
+.itemText {
+    position: absolute;
+    width: 98%;
+    height: 100%;
+    margin: 5px;
+    left: 0;
+    top: 0;
+    filter: blur(100px);
+}
+
+.itemText:hover {
+    filter: blur(0);
+}
+
+.item:hover .itemText {
+    filter: blur(0);
+    background-color: hwb(307 3% 46% / 0.656);
+    text-shadow: none;
+    color: whitesmoke;
+}
+
+.itemInner {
+    text-align: center;
+    padding-top: 30%;
+}
+
+.itemTitle {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.itemMessage {
+    font-weight: 400;
+    font-size: 14px;
+    padding: 10px 0px;
+}
+
+.itemButton {
+    position: relative;
+    // text-transform: uppercase;
+    opacity: 1;
+    // background-color: white;
+    // color: #c0301c;
+    border: none;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.itemButton:hover {
+    color: purple;
+}
+
+.flower-img {
+    overflow: hidden;
+    max-height: 600px;
+}

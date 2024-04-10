@@ -1,48 +1,26 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import "./MainPage.scss";
-import { RootState } from "../../store";
-import { Data, getData, setData } from "../../store/features/data";
-import { useAppDispatch } from "../../utils/hooks";
 import { useNavigate } from "react-router-dom";
-import { Loader } from "../../components/Loader/Loader";
+import Confetti from "react-confetti";
+import { Button } from "@mui/material";
 
 const MainPath = () => {
-    const { data, loading, error } = useSelector((state: RootState) => state.data);
-    const [dataObj, setDataObj] = useState<Data>();
-    const dispatch = useAppDispatch();
     const navigate = useNavigate();
+    const [currVal, setCurrVal] = useState(0);
 
     useEffect(() => {
-        dispatch(getData());
-    }, [dispatch])
+        currVal !== 60 && setTimeout(setCurrVal, 50, currVal + 1);
+    }, [currVal]);
 
-    useEffect(() => {
-        data && setDataObj(data);
-    }, [data])
-
-    const changeData = (isSum = true): void => {
-        if (dataObj?.numberData) {
-            const newNum = isSum ? dataObj.numberData + 1 : dataObj.numberData - 1;
-            dispatch(setData({ ...dataObj, numberData: newNum }));
-        }
-    }
 
     return (
-        <>
-            <div className="main-container">
-                <div>{dataObj?.stringData}</div>
-                <div className="number-container">
-                    <button className="basic-btn" onClick={() => changeData()}>+</button>
-                    <div>{dataObj?.numberData}</div>
-                    <button className="basic-btn" onClick={() => changeData(false)}>-</button>
-                </div>
+        <div className="main-container">
+            <Confetti />
+            {(currVal === 60) && <div className="photo" />}
+            <div className="number">{currVal}
+                {(currVal === 60) && <Button variant="contained" color="success" onClick={() => navigate('/celebration')}>Начать празднование!</Button>}
             </div>
-            {loading && <Loader />}
-            {error && <div>
-                Error: {error}
-            </div>}
-        </>
+        </div>
     );
 };
 
