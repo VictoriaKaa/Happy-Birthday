@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Happy-Birthday/static/css/main.9e1398cd.css",
-    "main.js": "/Happy-Birthday/static/js/main.7d6e313e.js",
+    "main.css": "/Happy-Birthday/static/css/main.e3a911f0.css",
+    "main.js": "/Happy-Birthday/static/js/main.9f127ee2.js",
     "static/js/453.7ba296a3.chunk.js": "/Happy-Birthday/static/js/453.7ba296a3.chunk.js",
     "static/media/cake1.jpg": "/Happy-Birthday/static/media/cake1.947b609fac1225110098.jpg",
     "static/media/flower2.jpg": "/Happy-Birthday/static/media/flower2.54a90edb95c3c960053a.jpg",
     "static/media/mother.jpg": "/Happy-Birthday/static/media/mother.7432affa9611b23e5792.jpg",
     "index.html": "/Happy-Birthday/index.html",
-    "main.9e1398cd.css.map": "/Happy-Birthday/static/css/main.9e1398cd.css.map",
-    "main.7d6e313e.js.map": "/Happy-Birthday/static/js/main.7d6e313e.js.map",
+    "main.e3a911f0.css.map": "/Happy-Birthday/static/css/main.e3a911f0.css.map",
+    "main.9f127ee2.js.map": "/Happy-Birthday/static/js/main.9f127ee2.js.map",
     "453.7ba296a3.chunk.js.map": "/Happy-Birthday/static/js/453.7ba296a3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e1398cd.css",
-    "static/js/main.7d6e313e.js"
+    "static/css/main.e3a911f0.css",
+    "static/js/main.9f127ee2.js"
   ]
 }
