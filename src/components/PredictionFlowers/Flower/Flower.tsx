@@ -32,10 +32,10 @@ export const Flower = ({ item }: any) => {
                 </DialogTitle>
                 <DialogContent>
                     <DialogContentText id="alert-dialog-description">
+                        {item.description}
                         <div className='flower-img'>
                             <img src={process.env.PUBLIC_URL + item.img} />
                         </div>
-                        {item.description}
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>

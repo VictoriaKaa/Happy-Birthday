@@ -83,7 +83,7 @@ export const BalloonGame  = ({ numberOfBalloons, gameDuration }: any) => {
                 <div className="game-settings">
                   <ScoreCard score={score} time={timeRemaining} />
                   <GameButton type={"alert"} onClick={stopGame}>
-                    Stop
+                    Стоп
                   </GameButton>
                 </div>
               </div>
@@ -95,7 +95,7 @@ export const BalloonGame  = ({ numberOfBalloons, gameDuration }: any) => {
             </div>
           )}
         </CSSTransition>
-        <Toast message={"+1 hits"} trigger={hit} />
+        <Toast message={"+1 попадание"} trigger={hit} />
       </div>
     );
   };
@@ -141,7 +141,7 @@ export const BalloonGame  = ({ numberOfBalloons, gameDuration }: any) => {
       {score > -1 ? (
         <p className="description">
           {`Ваши очки: ${
-            score === 0 ? "пусто" : `${score} удара(ов)`}
+            score === 0 ? "пусто" : `${score} шариков(а) лопнуто`}
           `}
         </p>
       ) : (
